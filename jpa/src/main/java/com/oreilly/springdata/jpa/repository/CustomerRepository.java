@@ -13,9 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.oreilly.springdata.jpa.core;
+package com.oreilly.springdata.jpa.repository;
 
 import org.springframework.data.repository.Repository;
+
+import com.oreilly.springdata.jpa.entity.Customer;
+import com.oreilly.springdata.jpa.entity.EmailAddress;
 
 /**
  * {@link Repository} to access {@link Customer} instances.

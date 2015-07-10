@@ -23,7 +23,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.oreilly.springdata.jpa.core.CustomerRepository;
+import com.oreilly.springdata.jpa.repository.CustomerRepository;
 
 /**
  * Test case bootstrapping both JavaConfig and XML configuration to validate configuration.

@@ -19,7 +19,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
-import com.oreilly.springdata.jpa.core.Customer;
+import com.oreilly.springdata.jpa.entity.Customer;
 
 /**
  * JavaConfig class to activate component scanning to pick up

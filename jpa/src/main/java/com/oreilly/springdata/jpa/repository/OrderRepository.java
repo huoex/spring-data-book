@@ -13,13 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.oreilly.springdata.jpa.order;
+package com.oreilly.springdata.jpa.repository;
 
 import java.util.List;
 
 import org.springframework.data.repository.PagingAndSortingRepository;
 
-import com.oreilly.springdata.jpa.core.Customer;
+import com.oreilly.springdata.jpa.entity.Customer;
+import com.oreilly.springdata.jpa.entity.Order;
 
 /**
  * Repository to access {@link Order}s.

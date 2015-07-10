@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.oreilly.springdata.jpa.core;
+package com.oreilly.springdata.jpa.repository;
 
 import java.util.List;
 
@@ -22,6 +22,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.querydsl.QueryDslPredicateExecutor;
 import org.springframework.data.repository.CrudRepository;
+
+import com.oreilly.springdata.jpa.entity.Product;
 
 /**
  * Repository to access {@link Product} instances.

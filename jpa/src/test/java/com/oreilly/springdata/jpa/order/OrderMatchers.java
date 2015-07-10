@@ -19,7 +19,9 @@ import static org.hamcrest.Matchers.*;
 
 import org.hamcrest.Matcher;
 
-import com.oreilly.springdata.jpa.core.Product;
+import com.oreilly.springdata.jpa.entity.LineItem;
+import com.oreilly.springdata.jpa.entity.Order;
+import com.oreilly.springdata.jpa.entity.Product;
 
 /**
  * Matchers to ease assertions on found {@link Order}s.

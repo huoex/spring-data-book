@@ -19,6 +19,8 @@ import static org.hamcrest.Matchers.*;
 
 import org.hamcrest.Matcher;
 
+import com.oreilly.springdata.jpa.entity.Product;
+
 /**
  * Custom matchers to ease assertions on our domain classes.
  * 

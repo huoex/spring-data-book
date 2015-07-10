@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.oreilly.springdata.jpa.order;
+package com.oreilly.springdata.jpa.entity;
 
 import java.math.BigDecimal;
 import java.util.Collections;
@@ -28,10 +28,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.springframework.util.Assert;
-
-import com.oreilly.springdata.jpa.core.AbstractEntity;
-import com.oreilly.springdata.jpa.core.Address;
-import com.oreilly.springdata.jpa.core.Customer;
 
 /**
  * An order.

@@ -13,13 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.oreilly.springdata.jpa.core;
+package com.oreilly.springdata.jpa.repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
 import org.springframework.stereotype.Repository;
+
+import com.oreilly.springdata.jpa.entity.Customer;
+import com.oreilly.springdata.jpa.entity.EmailAddress;
 
 /**
  * Plain JPA based implementation of {@link CustomerRepository}.

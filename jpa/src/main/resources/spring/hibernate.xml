@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/tx
+                           http://www.springframework.org/schema/tx/spring-tx.xsd">
+    
+    <bean id="emf" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+	    <property name="packagesToScan">
+	    	<list>
+	    		<value>com.oreilly.springdata.jpa.entity</value>
+	    	</list>
+	    </property>
+	    <property name="dataSource" ref="dataSource" />
+	    <property name="jpaVendorAdapter"> 
+	        <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"> 
+	            <property name="showSql" value="true" /> 
+	            <property name="generateDdl" value="true" />
+	        </bean> 
+	    </property>
+	    <property name="jpaProperties">
+	    	<props>
+	    		<prop key="hibernate.ejb.naming_strategy">org.hibernate.cfg.ImprovedNamingStrategy</prop>
+	    		<prop key="hibernate.hbm2ddl.auto">update</prop>
+	    		<prop key="hibernate.query.substitutions">true 'S', false 'N'</prop>
+	    		<!--<prop key="hibernate.dialect">it.aivebst.fatcapr.backend.common.persistence.OracleDialect</prop>-->
+	    	</props> 
+	    </property>
+    </bean>
+   
+    <!-- transaction manager for use with a single JPA EntityManagerFactory for transactional data access
+       to a single data source -->
+    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+      <property name="entityManagerFactory" ref="emf"/>
+    </bean>
+
+    <!-- enables interpretation of the @Transactional annotation for declarative transaction management
+       using the specified JpaTransactionManager -->
+    <tx:annotation-driven/>
+
+</beans>
